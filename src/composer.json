@@ -1,0 +1,17 @@
+{
+    "name": "kandu/www",
+    "description": "Software de eventos culturais",
+    "authors": [
+        {
+            "name": "Gabriela Montes",
+            "email": "gabicmontes@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+    	"psr-4": {
+    		"App\\":"../app",
+    		"Src\\":"../src"
+    	}
+    }
+}
