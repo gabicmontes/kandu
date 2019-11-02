@@ -15,8 +15,10 @@
 		<?php echo $this->addHead(); ?>
 	</head>
 	<body>
-   
-		<div class="Main">
+		<div class="Header">
+		<?php echo $this->addHeader(); ?>
+		</div>   
+		<div class="Main" style="background-color: #ffa;">
 		<?php echo $this->addMain(); ?>
 		</div>
 		<div class="Footer">

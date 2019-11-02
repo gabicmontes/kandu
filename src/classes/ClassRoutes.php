@@ -26,7 +26,9 @@ class ClassRoutes {
  			"login"=>"ControllerLogin",
  			"perfil"=>"ControllerPerfil",
  			"promotor"=>"ControllerPromotor",
- 			"cadastro"=>"ControllerCadastro"
+ 			"cadastro"=>"ControllerCadastro",
+ 			"dados"=>"ControllerDadosPessoais",
+ 			"cadastropromotor"=>"ControllerCadastroPromotor"
  		);
 
  		if(array_key_exists($I, $this->Rota)) {

@@ -7,14 +7,18 @@
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">Cadastrar</h5>
-            <form name="FormCadastro" id="FormCadastro" action="<?php echo DIRPAGE.'/cadastro/cadastrar'; ?>" method="post" class="form-signin">
+            <form name="FormCadastro" id="FormCadastro" action="<?php echo DIRPAGE.'/cadastropromotor/cadastrar'; ?>" method="post" class="form-signin">
               <div class="form-label-group">
-                Nome
+                Nome da Empresa
                 <input type="text" id="Nome" class="form-control" name="Nome" placeholder="nome" required autofocus>
+              </div>              
+              <div class="form-label-group">
+                Endereço
+                <input type="text" id="Endereco" name="Endereco" class="form-control" placeholder="endereco" required>
               </div>
               <div class="form-label-group">
-              	E-mail
-                <input type="text" id="Email" name="Email" class="form-control" placeholder="e-mail" required>
+                Descrição
+                <input type="textarea" id="Descricao" name="Descricao" class="form-control" placeholder="descricao" required>
               </div>
 
               <div class="form-label-group">  
@@ -25,8 +29,11 @@
               </select>
                 
               </div>
-              
-              <hr>
+
+              <div class="form-label-group">
+                E-mail
+                <input type="text" id="Email" name="Email" class="form-control" placeholder="e-mail" required>
+              </div>
 
               <div class="form-label-group">
               	Senha
@@ -35,13 +42,13 @@
               
               <div class="form-label-group">
               	Confirme a senha
-                <input type="password" name="SenhaConf" id="SenhaConf"  class="form-control" placeholder="Password" required>
-                
+                <input type="password" name="SenhaConf" id="SenhaConf"  class="form-control" placeholder="Password" required>                
               </div>
+
 
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Cadastrar</button>
               <a class="d-block text-center mt-2 small" href="login">Fazer login</a>
-              <a class="d-block text-center mt-2 small" href="cadastropromotor">Cadastro Promotor</a>
+              <a class="d-block text-center mt-2 small" href="cadastro">Cadastro cidadão</a>
               <hr class="my-4">
               <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
               <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Login com o Google</button>

@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="node_modules\bootstrap\compiler\bootstrap.css">
-  <link rel="stylesheet" href="node_modules\bootstrap\compiler\style.css">
-</head>
-
-<body>
-  <div class="py-5" id="header">
-    <div class="container py-3">
-      <div class="row">
-        <div class="col-md-12">
-          <div id="logo">
-           <img src="img/logo.png">
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-
-  <nav class="navbar navbar-expand-lg navbar-dark" id="menu">
-    <a class="navbar-brand" href="#">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação" id="pesquisar">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Dados Pessoais <span class="sr-only">(página atual)</span></a>
-        </li>
-        
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-      </form>
-    </div>
-  </nav>
-
-  <div class="container">
+   <div class="container">
     <div class="row">
 
       <div class="col-sm-8">
@@ -50,7 +7,7 @@
           <div class="container">
             <div class="row">
               <div class="p-0 col-lg-5 order-2 order-lg-1"> 
-                <img class="img-fluid d-block img-feed" src="img/secomp.jpg"> </div>
+                <img class="img-fluid d-block img-feed" src="<?php echo DIRIMG ?>/secomp.jpg"> </div>
               <div class="d-flex flex-column justify-content-center p-2 col-lg-7 order-1 order-lg-1">
                 <h3>VIII Semana da Computação</h3>
                 <p class="lead mb-0">I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the </p>
@@ -64,7 +21,7 @@
           <div class="container">
             <div class="row">
               <div class="p-0 col-lg-5 order-2 order-lg-1"> 
-                <img class="img-fluid d-block img-feed" src="img/forum.jpg"> </div>
+                <img class="img-fluid d-block img-feed" src="<?php echo DIRIMG ?>/forum.jpg"> </div>
               <div class="d-flex flex-column justify-content-center p-2 col-lg-7 order-1 order-lg-1">
                 <h3>XII Fórum Regional de Agroecologia</h3>
                 <p class="lead mb-0">I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the </p>
@@ -78,7 +35,7 @@
           <div class="container">
             <div class="row">
               <div class="p-0 col-lg-5 order-2 order-lg-1"> 
-                <img class="img-fluid d-block img-feed" src="img/ada.jpg"> </div>
+                <img class="img-fluid d-block img-feed" src="<?php echo DIRIMG ?>/ada.jpg"> </div>
               <div class="d-flex flex-column justify-content-center p-2 col-lg-7 order-1 order-lg-1">
                 <h3>I Dia da Ada Lovelace</h3>
                 <p class="lead mb-0">I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the </p>
@@ -174,6 +131,3 @@
   <script src="node_modules\jquery\dist\jquery.slim.js" charset="utf-8"></script>
     <script src="node_modules\popper.js\dist\popper.js" charset="utf-8"></script>
     <script src="node_modules\bootstrap\dist\js\bootstrap.js" charset="utf-8"></script>
-</body>
-
-</html>

@@ -12,13 +12,27 @@ class ClassCadastro extends ClassConexao {
 	protected function cadastroCidadao($Nome, $Email, $Cidade, $Senha) {
 		$Id=0;
 		$Cidade = 1;
-		echo $Nome.$Email.$Cidade.$Senha;
 
 		$this->Db = $this->conexaoDB()->prepare("insert into cidadao values(:id_cidadao, :nome_cidadao, :email_cidadao, :senha_cidadao, :id_cidade)");
 		$this->Db->bindParam(":id_cidadao", $Id, \PDO::PARAM_INT);
 		$this->Db->bindParam(":nome_cidadao", $Nome,\PDO::PARAM_STR);
 		$this->Db->bindParam(":email_cidadao", $Email,\PDO::PARAM_STR);
 		$this->Db->bindParam(":senha_cidadao", $Senha,\PDO::PARAM_STR);
+		$this->Db->bindParam(":id_cidade", $Cidade,\PDO::PARAM_STR);
+		$this->Db->execute();
+	}
+
+	protected function cadastroPromotor($Nome, $Email, $Cidade, $Senha, $Endereco, $Descricao) {
+		$Id=0;
+		$Cidade = 1;
+
+		$this->Db = $this->conexaoDB()->prepare("insert into promotor values(:id_promotor, :nome_promotor, :email_promotor, :senha_promotor, :endereco_promotor, :descricao_promotor, :id_cidade)");
+		$this->Db->bindParam(":id_promotor", $Id, \PDO::PARAM_INT);
+		$this->Db->bindParam(":nome_promotor", $Nome,\PDO::PARAM_STR);
+		$this->Db->bindParam(":email_promotor", $Email,\PDO::PARAM_STR);
+		$this->Db->bindParam(":senha_promotor", $Senha,\PDO::PARAM_STR);
+		$this->Db->bindParam(":endereco_promotor", $Endereco,\PDO::PARAM_STR);
+		$this->Db->bindParam(":descricao_promotor", $Descricao,\PDO::PARAM_STR);
 		$this->Db->bindParam(":id_cidade", $Cidade,\PDO::PARAM_STR);
 		$this->Db->execute();
 	}
