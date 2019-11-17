@@ -57,6 +57,37 @@ class ClassCadastro extends ClassConexao {
 		$this->Db->execute();
 	}
 
+	#Acesso ao banco de dados com seleção
+	protected function selecionaEvento() {
+		$Id;
+		$Nome;
+		$Endereco;
+		$Cidade;
+		$Descricao;
+		$Hora;
+		$Preco;
+		$Data;
+		$BFetch = $this->Db = $this->conexaoDB()->prepare("select * from evento");
+		$BFetch->bindParam(":id_evento", $Id, \PDO::PARAM_INT);
+		$BFetch->bindParam(":nome_evento", $Nome,\PDO::PARAM_STR);
+		$BFetch->bindParam(":data_evento", $Data,\PDO::PARAM_STR);
+		$BFetch->bindParam(":local_evento", $Endereco,\PDO::PARAM_STR);
+		$BFetch->bindParam(":hora_evento", $Hora,\PDO::PARAM_STR);
+		$BFetch->bindParam(":descricao_evento", $Descricao,\PDO::PARAM_STR);
+		$BFetch->bindParam(":preco_evento", $Preco,\PDO::PARAM_STR);
+		$BFetch->bindParam(":id_categoria", $Categoria,\PDO::PARAM_STR);
+		$BFetch->bindParam(":id_promotor", $Promotor,\PDO::PARAM_STR);
+		$BFetch->bindParam(":id_cidade", $Cidade,\PDO::PARAM_STR);
+		$BFetch->execute();
+
+		$I = 0;
+		while($Fecth = $BFetch->fetch(\PDO::FETCH_ASSOC)) {
+			$Array[$I] = ['Id'=>$Fecth['id_evento'],'Nome'=>$Fecth['nome_evento'],'Data'=>$Fecth['data_evento'],'Endereco'=>$Fecth['local_evento'],'Hora'=>$Fecth['hora_evento'],'Descricao'=>$Fecth['descricao_evento'],'Preco'=>$Fecth['preco_evento'],'Categoria'=>$Fecth['id_categoria'],'Promotor'=>$Fecth['id_promotor'], 'Cidade'=>$Fecth['id_cidade']];
+			$I++;
+		}
+		return $Array;
+	}
+
 
 	}
 
