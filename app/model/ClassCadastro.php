@@ -37,6 +37,26 @@ class ClassCadastro extends ClassConexao {
 		$this->Db->execute();
 	}
 
+	protected function cadastroEvento($Nome, $Endereco, $Descricao, $Hora, $Preco, $Data) {
+		$Id=0;
+		$Cidade = 1;
+		$Categoria = 1;
+		$Promotor = 1;
+
+		$this->Db = $this->conexaoDB()->prepare("insert into evento values(:id_evento, :nome_evento, :data_evento, :local_evento, :hora_evento, :descricao_evento, :preco_evento, :id_categoria, :id_promotor, :id_cidade)");
+		$this->Db->bindParam(":id_evento", $Id, \PDO::PARAM_INT);
+		$this->Db->bindParam(":nome_evento", $Nome,\PDO::PARAM_STR);
+		$this->Db->bindParam(":data_evento", $Data,\PDO::PARAM_STR);
+		$this->Db->bindParam(":local_evento", $Endereco,\PDO::PARAM_STR);
+		$this->Db->bindParam(":hora_evento", $Hora,\PDO::PARAM_STR);
+		$this->Db->bindParam(":descricao_evento", $Descricao,\PDO::PARAM_STR);
+		$this->Db->bindParam(":preco_evento", $Preco,\PDO::PARAM_STR);
+		$this->Db->bindParam(":id_categoria", $Categoria,\PDO::PARAM_STR);
+		$this->Db->bindParam(":id_promotor", $Promotor,\PDO::PARAM_STR);
+		$this->Db->bindParam(":id_cidade", $Cidade,\PDO::PARAM_STR);
+		$this->Db->execute();
+	}
+
 
 	}
 

@@ -1,4 +1,4 @@
-<div class="text-center" style="height: 625px; background-image: url(<?php echo DIRIMG . '/girassol.png; background-repeat: round';?>)">
+<div class="text-center" style="height: 625px;">
     <div class="container">
       <div class="row">
         <div class="col-12 mt-5">

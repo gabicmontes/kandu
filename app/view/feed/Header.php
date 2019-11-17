@@ -1,4 +1,4 @@
- <?php 
+<?php
     session_start(); 
     if((!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['senha']) == true)) {
       unset($_SESSION['nome']);
@@ -31,7 +31,14 @@
         <li class="nav-item active">
           <a class="nav-link" href="dados">Dados Pessoais <span class="sr-only">(página atual)</span></a>
         </li>
-        
+
+      <?php
+        if($_SESSION['tipo'] == "promotor") {
+          echo '<li class="nav-item active">
+          <a class="nav-link" href="cadastroevento">Cadastrar Evento <span class="sr-only">(página atual)</span></a>
+        </li>';
+      } ?>
+
       </ul>
       Bem, vindo <?php echo $_SESSION['nome'] ?>
       <form class="form-inline my-2 my-lg-0">

@@ -1,3 +1,4 @@
+
  <div class="container">
     <div class="row">
 
@@ -9,7 +10,7 @@
               <div class="p-0 col-lg-5 order-2 order-lg-1"> 
           <p style="display: inline;"><h1><?php echo $_SESSION['nome']  ?></h1></p>
           
-          <?php  
+          <?php
 
           if((!isset ($_SESSION['endereco']) == true) and (!isset ($_SESSION['descricao']) == true)) {
             echo "<b>Email: </b><br>";
